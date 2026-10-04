@@ -83,7 +83,15 @@ class RootErrorBoundary extends React.Component<
   }
 }
 
-const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
+// Fall back to a placeholder so a missing VITE_CONVEX_URL doesn't crash the
+// whole app on load (ConvexReactClient throws on a non-absolute URL).
+const convexUrl =
+  (import.meta.env.VITE_CONVEX_URL as string | undefined) ||
+  "https://placeholder.convex.cloud";
+if (!import.meta.env.VITE_CONVEX_URL) {
+  console.warn("VITE_CONVEX_URL is not set; sign-in and checkout are unavailable.");
+}
+const convex = new ConvexReactClient(convexUrl);
 
 
 
