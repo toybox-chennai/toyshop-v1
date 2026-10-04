@@ -128,8 +128,7 @@ function Field({
 }
 
 /**
- * Demo checkout (v1): UPI or card, simulated end to end. Signed-out
- * visitors are bounced through /auth with returnTo=/checkout by RequireAuth.
+ * Demo checkout (v1): UPI or card, simulated end to end. Open to guests.
  */
 export default function Checkout() {
   const { lines, subtotal, shipping, total, clear } = useCart();

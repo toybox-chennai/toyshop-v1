@@ -146,16 +146,6 @@ export default function Landing() {
                 UPI + Card
               </span>
             </div>
-
-            <p className="mt-5 text-xs font-semibold text-muted-foreground">
-              Already have an account?{" "}
-              <Link
-                to="/auth"
-                className="font-black uppercase tracking-wide underline underline-offset-4 hover:text-pop-blue"
-              >
-                Sign in
-              </Link>
-            </p>
           </motion.div>
 
           <div className="grid grid-cols-2 gap-4">
