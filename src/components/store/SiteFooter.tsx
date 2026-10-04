@@ -50,11 +50,6 @@ export function SiteFooter() {
                 Browse all toys
               </Link>
             </li>
-            <li>
-              <Link to="/auth" className="hover:text-pop-yellow">
-                Sign in
-              </Link>
-            </li>
           </ul>
         </div>
       </div>

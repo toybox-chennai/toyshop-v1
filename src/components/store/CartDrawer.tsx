@@ -24,7 +24,7 @@ const POP_BG = {
 
 /**
  * Slide-over cart. Opened from the header on every page; the checkout CTA
- * routes to /checkout, which bounces signed-out visitors through /auth.
+ * routes to /checkout.
  */
 export function CartDrawer() {
   const {
